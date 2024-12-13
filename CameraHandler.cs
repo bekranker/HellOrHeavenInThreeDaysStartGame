@@ -5,7 +5,7 @@ using DG.Tweening;
 public class CameraHandler : MonoBehaviour
 {
     [SerializeField] private Transform _to;
-    [SerializeField] private float _Speed;
+    [SerializeField, Range(0, 10)] private float _Speed;
 
 
     public void CameraSwitch()

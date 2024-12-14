@@ -26,6 +26,8 @@ public class CV : MonoBehaviour
         transform.DOMove(_To.position, _Speed);
         _FirstSentences.text += _currentSoulType.Memories[0];
         _SecondSentences.text += _currentSoulType.Memories[1];
+        _Name.text = _currentSoulType.name;
+        _Picture.sprite = _currentSoulType.Picture;
     }
     //closing CV with pressing full screen button;
     public void CloseMe()

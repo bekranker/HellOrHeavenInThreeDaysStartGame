@@ -22,10 +22,13 @@ public class Soul : MonoBehaviour, Interaction
     [SerializeField] private float _Speed;
     [SerializeField] private SpriteRenderer _spriteRenderer;
 
+    private bool _canClickable;
 
+    void Awake() => _canClickable = true;
     public SoulType GetSoulType() => D_SoulType;
     public void OnClickEvent()
     {
+        if (!_canClickable) return;
         _cameraHandler.CameraSwitchLeft();
         ExecuteCV();
         OnClick?.Invoke();
@@ -39,6 +42,7 @@ public class Soul : MonoBehaviour, Interaction
     }
     public void MoveToGate(Vector3 to)
     {
+        _canClickable = false;
         DOTween.Kill(transform);
         transform.DOMove(to, _Speed).OnComplete(() =>
         {

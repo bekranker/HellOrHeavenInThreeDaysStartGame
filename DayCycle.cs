@@ -41,7 +41,7 @@ public class DayCycle : MonoBehaviour, ITextSet
             _LineTMP.transform.localScale = _startScale;
         });
     }
-    public void DayFinished()
+    private void DayFinished()
     {
         //Win
         if (_PlayerHandler.GetPlayerCount() == 3 && _Clock.GetTime() >= 0)
@@ -56,6 +56,11 @@ public class DayCycle : MonoBehaviour, ITextSet
             Debug.Log("Day is over, you lose");
 
         }
+    }
+    public void StopDay()
+    {
+        _Clock.DayStart = false;
+        DayFinished();
     }
     //call this when First Next button start;
     public void StartDay()

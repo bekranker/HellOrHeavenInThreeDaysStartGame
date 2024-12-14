@@ -20,6 +20,7 @@ public class PlayerHandler : MonoBehaviour
         _Pool = new();
         _Pool.Spawn(_SoulPrefab, 10);
     }
+    public Soul GetCurrentSoul() => _currentSoul;
     // giving me random data including random Sin and Mitzhaves;
     public SoulType GetRandomSoulData()
     {

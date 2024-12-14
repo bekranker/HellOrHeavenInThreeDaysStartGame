@@ -11,6 +11,7 @@ public class Soul : MonoBehaviour, Interaction
     public event Action OnClick;
     [SerializeField] private float _Speed;
 
+    public SoulType GetSoulType() => D_SoulType;
     public void OnClickEvent()
     {
         _cameraHandler.CameraSwitch();
@@ -22,7 +23,9 @@ public class Soul : MonoBehaviour, Interaction
         _cv.gameObject.SetActive(true);
         _cv.SetCurrentSoulType(D_SoulType);
         _cv.SetDatas();
+        _cv.OpenMe();
     }
+
     public void Init(SoulType type, Transform from, Transform to, CameraHandler camHandler, CV cv)
     {
         _cameraHandler = camHandler;

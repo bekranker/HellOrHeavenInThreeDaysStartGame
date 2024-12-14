@@ -30,28 +30,22 @@ public class Jugment : MonoBehaviour
         }
         Soul executedSoul = _PlayerHandler.GetCurrentSoul();
 
-        List<Mitzvah> Mitzvahes = executedSoul.GetSoulType().Mitzvahs;
-        List<Sin> Sins = executedSoul.GetSoulType().Sins;
-        int counterM = 0;
-        int counterS = 0;
+        Mitzvah mitzvahes = executedSoul.GetSoulType().Mitzvahs;
+        Sin sins = executedSoul.GetSoulType().Sins;
+        int MitzhavesCount = 0;
+        int sinCount = 0;
 
 
-        if (Mitzvahes.Capacity != 0)
+        if (mitzvahes != null)
         {
-            for (int i = 0; i < Mitzvahes.Count; i++)
-            {
-                counterM += Mitzvahes[i].Order;
-            }
+            MitzhavesCount = mitzvahes.Order;
         }
-        if (Sins.Capacity != 0)
+        if (sins != null)
         {
-            for (int i = 0; i < Sins.Count; i++)
-            {
-                counterS += Sins[i].Order;
-            }
+            sinCount = sins.Order;
         }
         //it has to go hell;
-        if (counterS > counterM)
+        if (sinCount > MitzhavesCount)
         {
             if (gateType == GateType.Hell)
             {
@@ -87,6 +81,7 @@ public class Jugment : MonoBehaviour
 
         }
 
+        _PlayerHandler.MoveToGate(_Gate.transform.position);
         OnSelectGate?.Invoke("Line: " + _PlayerHandler.GetPlayerCount().ToString() + "/3");
     }
 }

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4324f9f75591d412187d8a6482564801, type: 3}
   m_Name: SoulType
   m_EditorClassIdentifier: 
+  name: Bekranker
   Memories:
   - "Merhaba ben ibrahim y\u0131lmaz instagramda 13 milyon takip\xE7im var"
-  Mitzvahs:
-  - {fileID: 11400000, guid: c67bc598aae9846258c22fa9df443ae0, type: 2}
-  Sins:
-  - {fileID: 11400000, guid: f4836d40b5e2844c3b6dc0102336ae24, type: 2}
+  Mitzvahs: {fileID: 11400000, guid: a21ab89a6883148498bdca45e556df39, type: 2}
+  Sins: {fileID: 11400000, guid: 502433b9cb36843f887925d3baf7c479, type: 2}
+  Picture: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}

@@ -2,12 +2,16 @@ using System;
 using TMPro;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
 
 
 public class CV : MonoBehaviour
 {
     [SerializeField] private float _Speed;
-    [SerializeField] private TMP_Text _SoulTMP;
+    [SerializeField] private TMP_Text _FirstSentences;
+    [SerializeField] private TMP_Text _SecondSentences;
+    [SerializeField] private TMP_Text _Name;
+    [SerializeField] private Image _Picture;
     [SerializeField] private Transform _To;
     private SoulType _currentSoulType;
     [SerializeField] private CameraHandler _CameraHandler;
@@ -20,21 +24,19 @@ public class CV : MonoBehaviour
     {
         DOTween.Kill(transform);
         transform.DOMove(_To.position, _Speed);
-        for (int i = 0; i < _currentSoulType.Memories.Count; i++)
-        {
-            _SoulTMP.text += _currentSoulType.Memories[i] + "\n";
-        }
+        _FirstSentences.text += _currentSoulType.Memories[0];
+        _SecondSentences.text += _currentSoulType.Memories[1];
     }
     //closing CV with pressing full screen button;
     public void CloseMe()
     {
-        _CameraHandler.CameraSwitch();
+        _CameraHandler.CameraSwitchStartPosition();
         _closeButton.SetActive(false);
         gameObject.SetActive(false);
     }
     public void OpenMe()
     {
-        _CameraHandler.CameraSwitch();
+        _CameraHandler.CameraSwitchLeft();
         _closeButton.SetActive(true);
     }
 }

@@ -5,8 +5,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "SoulType", menuName = "Scriptable Objects/SoulType")]
 public class SoulType : ScriptableObject
 {
+    public string name;
     public List<string> Memories = new();
-    public List<Mitzvah> Mitzvahs = new();
-    public List<Sin> Sins = new();
+    public Mitzvah Mitzvahs;
+    public Sin Sins;
+    public Sprite Picture;
 
 }

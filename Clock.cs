@@ -4,18 +4,18 @@ using System;
 public class Clock : MonoBehaviour
 {
     private bool _shootEvent;
-    public float _dayTime = 6;
+    [SerializeField] private float _dayTime = 6;
     private float _dayCounter;
     [SerializeField] private Transform _Arrow;
 
     private bool _isFinished;
     private event Action OnTimeFinish;
+    public bool DayStart;
 
 
     void Start()
     {
         _dayCounter = _dayTime;
-        ArrowAnimation();
     }
 
     [ContextMenu("Start Arrow Animation")]
@@ -26,6 +26,7 @@ public class Clock : MonoBehaviour
     }
     void Update()
     {
+        if (!DayStart) return;
         if (_isFinished)
         {
             if (!_shootEvent)

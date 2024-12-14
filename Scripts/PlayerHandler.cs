@@ -1,13 +1,15 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 public class PlayerHandler : MonoBehaviour
 {
     [Header("---Mitzvahes and Sins")]
-    [SerializeField] private List<Mitzvah> _Mitzvahes = new();
-    [SerializeField] private List<Sin> _Sins = new();
+    [SerializeField] private List<SoulType> _SoulType;
     [Header("---Prefab and Components")]
+    [SerializeField] private DayCycle _DayCycle;
+    [SerializeField] private Clock _Clock;
     [SerializeField] private CV _cv;
     [SerializeField] private Soul _SoulPrefab;
     [SerializeField] private CameraHandler _cameraHandler;
@@ -17,12 +19,14 @@ public class PlayerHandler : MonoBehaviour
     private Pool<Soul> _Pool;
     private Soul _currentSoul;
     private int _playerCount;
-
     public event Action OnNext;
+
+
     void Start()
     {
         _Pool = new();
         _Pool.Spawn(_SoulPrefab, 10);
+        _SoulType = _SoulType.Where(item => !PlayerPrefs.HasKey(item.name)).ToList();
     }
     void OnEnable()
     {
@@ -42,47 +46,35 @@ public class PlayerHandler : MonoBehaviour
     }
     public Soul GetCurrentSoul() => _currentSoul;
     // giving me random data including random Sin and Mitzhaves;
-    public SoulType GetRandomSoulData()
+    private SoulType GetRandomSoulData()
     {
-        if (_Sins.Capacity <= 0 || _Mitzvahes.Capacity <= 0)
+        if (_SoulType.Count <= 0)
         {
-            Debug.Log("Sins Capacity: " + _Sins.Capacity + "\n" + "Mitzhaves Capacity: " + _Mitzvahes.Capacity);
-            return null;
+            Debug.Log("Soul Type Count: " + _SoulType.Count);
         }
-
-
-        SoulType tempSoul = SoulType.CreateInstance<SoulType>();
-
-        for (int i = 0; i < Random.Range(2, 5); i++)
-        {
-            int randomIndexM = Random.Range(0, _Mitzvahes.Count);
-            int randomIndexS = Random.Range(0, _Sins.Count);
-
-            tempSoul.Mitzvahs.Add(_Mitzvahes[randomIndexM]);
-            tempSoul.Sins.Add(_Sins[randomIndexS]);
-
-            tempSoul.Memories.Add(_Mitzvahes[randomIndexM].MitzvahLine);
-            tempSoul.Memories.Add(_Sins[randomIndexS].SinLine);
-
-            _Mitzvahes.RemoveAt(randomIndexM);
-            _Sins.RemoveAt(randomIndexS);
-        }
-
-
-        return tempSoul;
+        int randomIndex = Random.Range(0, _SoulType.Count);
+        SoulType tempSoultType = _SoulType[randomIndex];
+        _SoulType.RemoveAt(randomIndex);
+        return tempSoultType;
     }
     //returning Soul class;
     public Soul GetNewSoul()
     {
+        if (!_Clock.DayStart)
+        {
+            _DayCycle.StartDay();
+        }
         if (_currentSoul != null)
         {
             Debug.Log("Current Soul is full, select a Gate");
             return null;
         }
+
         SetPlayerCount(_playerCount++);
         OnNext?.Invoke();
         _currentSoul = _Pool.GetFromPool(_SoulPrefab);
         _currentSoul.Init(GetRandomSoulData(), _From, _To, _cameraHandler, _cv);
         return _currentSoul;
     }
+    public void MoveToGate(Vector3 selectedGatePosition) => GetCurrentSoul().MoveToGate(selectedGatePosition);
 }

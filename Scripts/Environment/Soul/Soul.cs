@@ -26,7 +26,7 @@ public class Soul : MonoBehaviour, Interaction
     public SoulType GetSoulType() => D_SoulType;
     public void OnClickEvent()
     {
-        _cameraHandler.CameraSwitch();
+        _cameraHandler.CameraSwitchLeft();
         ExecuteCV();
         OnClick?.Invoke();
     }
@@ -40,7 +40,7 @@ public class Soul : MonoBehaviour, Interaction
     public void MoveToGate(Vector3 to)
     {
         DOTween.Kill(transform);
-        transform.DOMove(to, _Speed).SetEase(Ease.InBounce).OnComplete(() =>
+        transform.DOMove(to, _Speed).OnComplete(() =>
         {
             _spriteRenderer.DOFade(0, _Speed);
         });

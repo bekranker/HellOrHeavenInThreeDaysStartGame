@@ -18,6 +18,7 @@ public class CV : MonoBehaviour
     //writing current clicked soul's memories.;
     public void SetDatas()
     {
+        DOTween.Kill(transform);
         transform.DOMove(_To.position, _Speed);
         for (int i = 0; i < _currentSoulType.Memories.Count; i++)
         {
@@ -36,5 +37,4 @@ public class CV : MonoBehaviour
         _CameraHandler.CameraSwitch();
         _closeButton.SetActive(true);
     }
-
 }

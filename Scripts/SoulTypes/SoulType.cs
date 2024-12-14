@@ -6,6 +6,7 @@ using UnityEngine;
 public class SoulType : ScriptableObject
 {
     public List<string> Memories = new();
-
+    public List<Mitzvah> Mitzvahs = new();
+    public List<Sin> Sins = new();
 
 }

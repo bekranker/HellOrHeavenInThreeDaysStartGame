@@ -11,7 +11,7 @@ public class CameraHandler : MonoBehaviour
     public void CameraSwitch()
     {
         DOTween.Kill(transform);
-        transform.DOMove(_to.position, _Speed);
+        transform.DOMove(_to.position, _Speed).SetEase(Ease.OutBack);
     }
 
 }

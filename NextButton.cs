@@ -4,6 +4,7 @@ using UnityEngine;
 public class NextButton : MonoBehaviour, Interaction
 {
     [SerializeField] private PlayerHandler _PlayerHandler;
+
     public event Action OnClick;
     public void OnClickEvent()
     {

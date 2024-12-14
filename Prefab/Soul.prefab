@@ -152,3 +152,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   D_SoulType: {fileID: 0}
+  _Speed: 1

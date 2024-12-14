@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d7743a40cf83450fa44ad48860d0170, type: 3}
   m_Name: Mitzvah 2
   m_EditorClassIdentifier: 
-  MitzvahLine: "\u0130nsanlara 100 TL verdi 3"
+  MitzvahLine: "Kendi rahat\u0131n\u0131 ikinci plana al\u0131p ba\u015Fkalar\u0131n\u0131n
+    ihtiya\xE7lar\u0131n\u0131 \xF6nceliklendirmek."
   Order: 7

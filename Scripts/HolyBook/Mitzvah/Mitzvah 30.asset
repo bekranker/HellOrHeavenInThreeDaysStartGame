@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d7743a40cf83450fa44ad48860d0170, type: 3}
+  m_Name: Mitzvah 30
+  m_EditorClassIdentifier: 
+  MitzvahLine: "Ekip \xE7al\u0131\u015Fmas\u0131nda ba\u015Fkalar\u0131n\u0131n katk\u0131lar\u0131n\u0131
+    takdir etmek ve birlikte ba\u015Far\u0131y\u0131 kutlamak."
+  Order: 2

@@ -30,7 +30,7 @@ public class PlayerHandler : MonoBehaviour
         int randomIndexM = Random.Range(0, _Mitzvahes.Capacity);
         int randomIndexS = Random.Range(0, _Sins.Capacity);
 
-        SoulType tempSoul = new SoulType();
+        SoulType tempSoul = SoulType.CreateInstance<SoulType>();
         tempSoul.Mitzvahs.Add(_Mitzvahes[randomIndexM]);
         tempSoul.Sins.Add(_Sins[randomIndexS]);
 

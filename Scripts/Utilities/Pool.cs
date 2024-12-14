@@ -11,7 +11,9 @@ public class Pool<T> where T : MonoBehaviour
     {
         for (int i = 0; i < SpawnCount; i++)
         {
-            Object.Instantiate(v);
+            T spawnedObject = Object.Instantiate(v);
+            spawnedObject.gameObject.SetActive(false);
+            _stacked.Push(spawnedObject);
         }
     }
     public void AddToPool(T v)
@@ -27,6 +29,7 @@ public class Pool<T> where T : MonoBehaviour
         if (_stacked != null || _stacked.Peek() != null)
         {
             tempObj = _stacked.Pop();
+            tempObj.gameObject.SetActive(true);
         }
         else
         {

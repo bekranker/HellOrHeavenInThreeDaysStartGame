@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 317b43d13fe7c480aa80f33d87031295, type: 3}
-  m_Name: Sin
+  m_Name: Sin 3
   m_EditorClassIdentifier: 
-  SinLine: "Doland\u0131r\u0131c\u0131 1"
+  SinLine: "\xC7evresinden her zaman takdir ve hayranl\u0131k beklemek"
   Order: 7

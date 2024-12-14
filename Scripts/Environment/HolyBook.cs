@@ -10,5 +10,6 @@ public class HolyBook : MonoBehaviour, Interaction
         _HolyBook.SetActive(true);
         OnClick?.Invoke();
     }
+
     public void CloseBook() => _HolyBook.SetActive(false);
 }

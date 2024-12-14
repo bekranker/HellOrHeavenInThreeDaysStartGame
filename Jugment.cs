@@ -18,6 +18,8 @@ public class Jugment : MonoBehaviour
     {
         _Gate.OnClick -= Judgement;
     }
+    //I know it look shity... sorry for that :'( ;
+
     public void Judgement(GateType gateType)
     {
         //find all sins and Mitzhases and sum them order's. look which one is bigger.;

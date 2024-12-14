@@ -20,6 +20,8 @@ public class Soul : MonoBehaviour, Interaction
     private SoulType D_SoulType;
     public event Action OnClick;
     [SerializeField] private float _Speed;
+    [SerializeField] private SpriteRenderer _spriteRenderer;
+
 
     public SoulType GetSoulType() => D_SoulType;
     public void OnClickEvent()
@@ -35,7 +37,14 @@ public class Soul : MonoBehaviour, Interaction
         _cv.SetDatas();
         _cv.OpenMe();
     }
-
+    public void MoveToGate(Vector3 to)
+    {
+        DOTween.Kill(transform);
+        transform.DOMove(to, _Speed).SetEase(Ease.InBounce).OnComplete(() =>
+        {
+            _spriteRenderer.DOFade(0, _Speed);
+        });
+    }
     public void Init(SoulType type, Transform from, Transform to, CameraHandler camHandler, CV cv)
     {
         _cameraHandler = camHandler;

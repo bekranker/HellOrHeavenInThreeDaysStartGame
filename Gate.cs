@@ -14,10 +14,6 @@ public class Gate : MonoBehaviour, Interaction
     {
         OnClick?.Invoke(_GateType);
     }
-
-    //I know it look shity... sorry for that :'( ;
-
-
 }
 
 public enum GateType

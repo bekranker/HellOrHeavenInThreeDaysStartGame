@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class HolyBook : MonoBehaviour, Interaction
@@ -10,6 +11,8 @@ public class HolyBook : MonoBehaviour, Interaction
     [SerializeField] private List<string> _TitlesSins = new();
     public Dictionary<int, string> Mitzvahs = new();
     public Dictionary<int, string> Sins = new();
+    [SerializeField] private List<TMP_Text> _MitzvahsTMPs = new();
+    [SerializeField] private List<TMP_Text> _SinsTMPs = new();
 
     void Start()
     {
@@ -21,6 +24,8 @@ public class HolyBook : MonoBehaviour, Interaction
         {
             Mitzvahs.Add(i, _TitlesMitzvahs[i]);
             Sins.Add(i, _TitlesSins[i]);
+            _MitzvahsTMPs[i].text = i + "-) " + _TitlesMitzvahs[i];
+            _SinsTMPs[i].text = i + "-) " + _TitlesSins[i];
         }
     }
     public void OnClickEvent()

@@ -54,7 +54,6 @@ public class DayCycle : MonoBehaviour, ITextSet
         {
             //a black screen splash to screen and then main menu will open;
             Debug.Log("Day is over, you lose");
-
         }
     }
     public void StopDay()

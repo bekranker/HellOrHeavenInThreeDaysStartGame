@@ -4,7 +4,7 @@ using UnityEngine;
 public class HearthHandler : MonoBehaviour
 {
 	[SerializeField] private List<Image> _Hearts = new();
-	[SerializeField] private Color _DisabledColor;
+	[SerializeField] private Sprite _toSprite;
 	[SerializeField] private List<Jugment> _Jugment = new();
 
 	void OnEnable()
@@ -25,7 +25,7 @@ public class HearthHandler : MonoBehaviour
 	public int GetHEarthCount() => _hearthCount;
 	public void DecreaseHearth()
 	{
-		_Hearts[0].color = _DisabledColor;
+		_Hearts[0].sprite = _toSprite;
 		_Hearts.Remove(_Hearts[0]);
 		SetHearthCount(_hearthCount - 1);
 		if (_hearthCount <= 0)

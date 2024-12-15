@@ -10,6 +10,9 @@ public class CV : MonoBehaviour
     [SerializeField] private TMP_Text _FirstSentences;
     [SerializeField] private TMP_Text _SecondSentences;
     [SerializeField] private TMP_Text _Name;
+    [SerializeField] private TMP_Text _Job;
+    [SerializeField] private TMP_Text _Sex;
+
     [SerializeField] private Image _Picture;
     private SoulType _currentSoulType;
     [SerializeField] private CameraHandler _CameraHandler;
@@ -25,6 +28,8 @@ public class CV : MonoBehaviour
         _FirstSentences.text = _currentSoulType.Memories[0];
         _SecondSentences.text = _currentSoulType.Memories[1];
         _Name.text = _currentSoulType.name;
+        _Job.text = _currentSoulType.JobTitle;
+        _Sex.text = _currentSoulType.Sex;
         _Picture.sprite = _currentSoulType.Picture;
     }
     //closing CV with pressing full screen button;

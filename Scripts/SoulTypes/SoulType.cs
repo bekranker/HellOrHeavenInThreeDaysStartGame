@@ -6,9 +6,11 @@ using UnityEngine;
 public class SoulType : ScriptableObject
 {
     public string name;
+    public string JobTitle;
+    public string Sex;
     public List<string> Memories = new();
-    public Mitzvah Mitzvahs;
-    public Sin Sins;
     public Sprite Picture;
+    public string JugmentOne;
+    public string JugmentTwo;
 
 }

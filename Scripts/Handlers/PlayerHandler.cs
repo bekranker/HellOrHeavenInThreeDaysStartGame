@@ -32,6 +32,8 @@ public class PlayerHandler : MonoBehaviour
     {
         _Jugment[0].OnSelectGate += SetNullSelection;
         _Jugment[1].OnSelectGate += SetNullSelection;
+
+
     }
     void OnDisable()
     {

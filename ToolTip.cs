@@ -13,7 +13,8 @@ public class ToolTip : MonoBehaviour
     void Update()
     {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = mousePos - (transform.localScale / 2);
+        mousePos.z = -1;
+        transform.position = mousePos;
     }
 
     public void Show(string tip)

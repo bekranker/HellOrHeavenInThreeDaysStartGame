@@ -35,13 +35,11 @@ public class CV : MonoBehaviour
     //closing CV with pressing full screen button;
     public void CloseMe()
     {
-        _CameraHandler.CameraSwitchStartPosition();
         _closeButton.SetActive(false);
         gameObject.SetActive(false);
     }
     public void OpenMe()
     {
-        _CameraHandler.CameraSwitchLeft();
         _closeButton.SetActive(true);
     }
 }

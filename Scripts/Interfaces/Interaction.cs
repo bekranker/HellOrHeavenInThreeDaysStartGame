@@ -3,5 +3,8 @@ using UnityEngine;
 
 public interface Interaction
 {
-    abstract void OnClickEvent();
+    event Action OnHover, OnExitHover;
+    void OnClickEvent();
+    void OnHoverEnter();
+    void OnHoverExit();
 }

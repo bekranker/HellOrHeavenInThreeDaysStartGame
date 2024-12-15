@@ -6,6 +6,13 @@ using UnityEngine;
 public class HolyBook : MonoBehaviour, Interaction
 {
     public event Action OnClick;
+    public event Action OnHover;
+    public event Action OnExitHover;
+    [Header("---Props")]
+
+    [SerializeField] private Sprite _changeTo;
+    [SerializeField] private SpriteRenderer _SpriteRenderer;
+    private Sprite _startSprite;
     [SerializeField] private GameObject _HolyBook;
     [SerializeField] private List<string> _TitlesMitzvahs = new();
     [SerializeField] private List<string> _TitlesSins = new();
@@ -17,6 +24,7 @@ public class HolyBook : MonoBehaviour, Interaction
     void Start()
     {
         SetDictionaries();
+        _startSprite = _SpriteRenderer.sprite;
     }
     public void SetDictionaries()
     {
@@ -42,4 +50,16 @@ public class HolyBook : MonoBehaviour, Interaction
         OnClick?.Invoke();
     }
     public void CloseBook() => _HolyBook.SetActive(false);
+
+    public void OnHoverEnter()
+    {
+        _SpriteRenderer.sprite = _changeTo;
+        OnHover?.Invoke();
+    }
+
+    public void OnHoverExit()
+    {
+        _SpriteRenderer.sprite = _startSprite;
+        OnExitHover?.Invoke();
+    }
 }

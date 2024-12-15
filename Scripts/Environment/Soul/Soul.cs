@@ -19,6 +19,9 @@ public class Soul : MonoBehaviour, Interaction
     private CameraHandler _cameraHandler;
     private SoulType D_SoulType;
     public event Action OnClick;
+    public event Action OnHover;
+    public event Action OnExitHover;
+
     [SerializeField] private float _Speed;
     [SerializeField] private SpriteRenderer _spriteRenderer;
 
@@ -29,7 +32,6 @@ public class Soul : MonoBehaviour, Interaction
     public void OnClickEvent()
     {
         if (!_canClickable) return;
-        _cameraHandler.CameraSwitchLeft();
         ExecuteCV();
         OnClick?.Invoke();
     }
@@ -57,5 +59,15 @@ public class Soul : MonoBehaviour, Interaction
         D_SoulType = type;
         transform.DOMove(to.position, _Speed);
         _cv = cv;
+    }
+
+    public void OnHoverEnter()
+    {
+        OnHover?.Invoke();
+    }
+
+    public void OnHoverExit()
+    {
+        OnExitHover?.Invoke();
     }
 }

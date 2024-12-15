@@ -1,19 +1,20 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Icons : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class Icons : MonoBehaviour, IPointerClickHandler
 {
+
     [SerializeField] private string _toolTip;
     //we will spawn that prefab and drag it where we want
-    [SerializeField] private GameObject _HoldingIcon;
+    [SerializeField] private IconItself _HoldingIcon;
     [SerializeField] private ToolTip _ToolTip;
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        _ToolTip.Show(_toolTip);
-    }
+    [SerializeField] private IconHandler _IconHandler;
+    [SerializeField] private Transform _Parent;
 
-    public void OnPointerExit(PointerEventData eventData)
+    public void OnPointerClick(PointerEventData eventData)
     {
-        _ToolTip.UnShow();
+        IconItself tempIcon = _IconHandler.SetSelectedObject(Instantiate(_HoldingIcon));
+        tempIcon.transform.SetParent(_Parent);
+        tempIcon.gameObject.SetActive(false);
     }
 }

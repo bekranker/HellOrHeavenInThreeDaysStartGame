@@ -11,7 +11,10 @@ public class HolyBook : MonoBehaviour, Interaction
     public Dictionary<int, string> Mitzvahs = new();
     public Dictionary<int, string> Sins = new();
 
-
+    void Start()
+    {
+        SetDictionaries();
+    }
     public void SetDictionaries()
     {
         for (int i = 0; i < 6; ++i)

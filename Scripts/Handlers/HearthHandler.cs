@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
-
 public class HearthHandler : MonoBehaviour
 {
 	[SerializeField] private List<Image> _Hearts = new();
@@ -29,5 +28,10 @@ public class HearthHandler : MonoBehaviour
 		_Hearts[0].color = _DisabledColor;
 		_Hearts.Remove(_Hearts[0]);
 		SetHearthCount(_hearthCount - 1);
+		if (_hearthCount <= 0)
+		{
+			//Cinematic dead from Hearth Count
+		}
+
 	}
 }

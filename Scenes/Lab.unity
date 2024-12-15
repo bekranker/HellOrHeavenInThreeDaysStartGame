@@ -291,7 +291,7 @@ MonoBehaviour:
   _Hearts:
   - {fileID: 2130733590}
   - {fileID: 1152145187}
-  _DisabledColor: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
+  _DisabledColor: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
   _Jugment:
   - {fileID: 1031248229}
   - {fileID: 2140243819}
@@ -1507,19 +1507,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _HolyBook: {fileID: 1606648244}
   _TitlesMitzvahs:
-  - "Payla\u015Fma"
+  - "Al\xE7akg\xF6n\xFCll\xFCl\xFCk"
   - "\xD6l\xE7\xFCl\xFCl\xFCk"
   - "Sayg\u0131"
   - "Sab\u0131r"
   - "\xC7al\u0131\u015Fkanl\u0131k"
-  - "Al\xE7akg\xF6n\xFCll\xFCl\xFCk"
+  - "Payla\u015Fma"
   _TitlesSins:
   - Gurur
   - Tembellik
-  - "\xD6fke"
-  - "k\u0131skan\xE7l\u0131k"
   - "A\xE7g\xF6zl\xFCl\xFCk"
+  - "K\u0131skan\xE7l\u0131k"
   - Oburluk
+  - "\xD6fke"
 --- !u!61 &862859239
 BoxCollider2D:
   m_ObjectHideFlags: 0

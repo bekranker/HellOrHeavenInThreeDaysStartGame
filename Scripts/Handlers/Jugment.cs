@@ -35,17 +35,17 @@ public class Jugment : MonoBehaviour
 
         string jugmentOne = executedSoul.GetSoulType().JugmentOne;
         string jugmentTwo = executedSoul.GetSoulType().JugmentTwo;
-        int MitzhavesCount = 0;
-        int sinCount = 0;
+        int JugmentOneCount = 0;
+        int JugmentTwoCount = 0;
 
 
 
-        Check(ref MitzhavesCount, ref sinCount, jugmentOne, _HolyBook.Mitzvahs, _HolyBook.Sins);
-        Check(ref sinCount, ref MitzhavesCount, jugmentTwo, _HolyBook.Sins, _HolyBook.Mitzvahs);
+        JugmentOneCount = Check(jugmentOne, _HolyBook.Mitzvahs, _HolyBook.Sins);
+        JugmentTwoCount = Check(jugmentTwo, _HolyBook.Mitzvahs, _HolyBook.Sins);
 
 
         //It has to go heaven
-        if (MitzhavesCount > sinCount)
+        if (JugmentOneCount >= JugmentTwoCount)
         {
             //its wrong decision
             if (gateType == GateType.Hell)
@@ -58,7 +58,7 @@ public class Jugment : MonoBehaviour
                 Debug.Log("Right Decision");
             }
         }
-        else if (MitzhavesCount < sinCount)
+        else if (JugmentOneCount <= JugmentTwoCount)
         {
             //Its right decision
             if (gateType == GateType.Hell)
@@ -71,20 +71,27 @@ public class Jugment : MonoBehaviour
                 OnWrong?.Invoke();
             }
         }
-
+        print("Sevap Point: " + JugmentOneCount);
+        print("Günah Point: " + JugmentTwoCount);
         _PlayerHandler.MoveToGate(_Gate.transform.position);
         OnSelectGate?.Invoke("Line: " + _PlayerHandler.GetPlayerCount().ToString() + "/3");
     }
-    private void Check(ref int v, ref int v2, string myValue, Dictionary<int, string> dV, Dictionary<int, string> dV2)
+    private int Check(string myValue, Dictionary<int, string> dV, Dictionary<int, string> dV2)
     {
         foreach (KeyValuePair<int, string> item in dV)
         {
             if (item.Value == myValue)
             {
-                v = item.Key;
-                return;
+                return item.Key;
             }
         }
-        Check(ref v2, ref v, myValue, dV2, null);
+        foreach (KeyValuePair<int, string> item in dV2)
+        {
+            if (item.Value == myValue)
+            {
+                return item.Key;
+            }
+        }
+        return 0;
     }
 }

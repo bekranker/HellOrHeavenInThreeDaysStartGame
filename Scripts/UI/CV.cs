@@ -17,7 +17,6 @@ public class CV : MonoBehaviour
     [SerializeField] private Image _BigFrontPicture;
 
     private SoulType _currentSoulType;
-    [SerializeField] private CameraHandler _CameraHandler;
     [SerializeField] private GameObject _closeButton;
 
     public void SetCurrentSoulType(SoulType v) => _currentSoulType = v;

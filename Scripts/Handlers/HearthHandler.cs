@@ -1,12 +1,17 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 public class HearthHandler : MonoBehaviour
 {
 	[SerializeField] private List<Image> _Hearts = new();
 	[SerializeField] private Sprite _toSprite;
 	[SerializeField] private List<Jugment> _Jugment = new();
-
+	[SerializeField] private SceneTransaction _Sct;
+	void Start()
+	{
+		SetHearthCount(2);
+	}
 	void OnEnable()
 	{
 		_Jugment[0].OnWrong += DecreaseHearth;
@@ -31,6 +36,8 @@ public class HearthHandler : MonoBehaviour
 		if (_hearthCount <= 0)
 		{
 			//Cinematic dead from Hearth Count
+			_Sct.InstantExitLevel("Lose");
+			CreateAudio.PlayAudio("fail");
 		}
 
 	}

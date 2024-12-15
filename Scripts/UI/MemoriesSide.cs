@@ -25,7 +25,6 @@ public class MemoriesSide : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         if (_can) return;
-        print("saUIO");
         if (_Icons.GetSelectedObject() != null)
         {
             _Icons.Effect(_to.position);

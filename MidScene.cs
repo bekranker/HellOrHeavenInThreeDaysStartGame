@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MidScene : MonoBehaviour
 {
@@ -7,7 +8,7 @@ public class MidScene : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-
+            SceneManager.LoadScene("menu");
         }
     }
 }

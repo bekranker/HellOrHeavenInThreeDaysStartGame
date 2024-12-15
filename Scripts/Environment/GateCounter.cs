@@ -26,13 +26,13 @@ public class GateCounter : MonoBehaviour, ITextSet
     void Start()
     {
         _startScale = _HellCounterTMP.transform.localScale;
-        textEffect("Passed Soul: 0");
+        textEffect("0");
     }
     private void IncreaseCount(GateType gateType)
     {
         if (_PlayerHandler.GetCurrentSoul() == null) return;
         _count++;
-        SetText("Passed Soul: " + _count);
+        SetText(_count.ToString());
     }
     public void SetText(string v)
     {

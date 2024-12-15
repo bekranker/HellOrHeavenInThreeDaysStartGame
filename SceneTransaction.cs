@@ -24,4 +24,14 @@ public class SceneTransaction : MonoBehaviour
             SceneManager.LoadScene(sceneName);
         });
     }
+    public void InstantExitLevel(string sceneName)
+    {
+        _Panel.DOFade(1, .1f).OnComplete(() =>
+        {
+            DOVirtual.DelayedCall(2, () =>
+            {
+                SceneManager.LoadScene(sceneName);
+            });
+        });
+    }
 }

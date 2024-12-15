@@ -18,7 +18,7 @@ public class DayCycle : MonoBehaviour, ITextSet
     void Start()
     {
         _startScale = transform.localScale;
-        textEffect("Day " + _day);
+        textEffect("Day " + GetDay());
         Invoke("Announcment", Random.Range(10, 50));
     }
     private void Announcment()
@@ -27,11 +27,12 @@ public class DayCycle : MonoBehaviour, ITextSet
     }
     public int GetDay()
     {
-        if (PlayerPrefs.HasKey("Day"))
+        if (PlayerPrefs.HasKey("Day") && !PlayerPrefs.HasKey("lose"))
         {
             return PlayerPrefs.GetInt("Day") + 1;
         }
-        return _day;
+        PlayerPrefs.DeleteKey("lose");
+        return 1;
     }
     public void SetDay(int v)
     {

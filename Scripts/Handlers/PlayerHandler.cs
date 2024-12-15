@@ -12,7 +12,6 @@ public class PlayerHandler : MonoBehaviour
     [SerializeField] private Clock _Clock;
     [SerializeField] private CV _cv;
     [SerializeField] private Soul _SoulPrefab;
-    [SerializeField] private CameraHandler _cameraHandler;
     [SerializeField] private List<Jugment> _Jugment;
     [Header("---Props")]
     [SerializeField] private Transform _From, _To;
@@ -75,7 +74,7 @@ public class PlayerHandler : MonoBehaviour
         SetPlayerCount(_playerCount++);
         OnNext?.Invoke();
         _currentSoul = _Pool.GetFromPool(_SoulPrefab);
-        _currentSoul.Init(GetRandomSoulData(), _From, _To, _cameraHandler, _cv);
+        _currentSoul.Init(GetRandomSoulData(), _From, _To, _cv);
         return _currentSoul;
     }
     public void MoveToGate(Vector3 selectedGatePosition) => GetCurrentSoul().MoveToGate(selectedGatePosition);

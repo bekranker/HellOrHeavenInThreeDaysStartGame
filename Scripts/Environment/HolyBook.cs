@@ -46,6 +46,7 @@ public class HolyBook : MonoBehaviour, Interaction
     }
     public void OnClickEvent()
     {
+        CreateAudio.PlayAudio("openbook");
         _HolyBook.SetActive(true);
         OnClick?.Invoke();
     }

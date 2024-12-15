@@ -8,6 +8,7 @@ public class Clock : MonoBehaviour
     private bool _shootEvent;
     [SerializeField] private float _dayTime = 6;
     private float _dayCounter;
+    [SerializeField] private SceneTransaction _Sct;
     [SerializeField] private Transform _Arrow;
     [SerializeField] private Image _targetImage;
     private bool _isFinished;
@@ -34,6 +35,8 @@ public class Clock : MonoBehaviour
         {
             if (!_shootEvent)
             {
+                _Sct.InstantExitLevel("Lose");
+                CreateAudio.PlayAudio("fail");
                 OnTimeFinish?.Invoke();
                 _shootEvent = true;
             }

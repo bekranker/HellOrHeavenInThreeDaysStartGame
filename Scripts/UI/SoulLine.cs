@@ -11,7 +11,7 @@ public class SoulLine : MonoBehaviour, ITextSet
     [SerializeField] private float _Speed;
     private Vector3 _startScale;
 
-
+    [SerializeField] private SceneTransaction _Sct;
 
     void OnEnable()
     {
@@ -31,6 +31,11 @@ public class SoulLine : MonoBehaviour, ITextSet
     {
         _PlayerHandler.SetPlayerCount(_PlayerHandler.GetPlayerCount() + 1);
         SetText("Line: " + _PlayerHandler.GetPlayerCount().ToString() + "/3");
+        if (_PlayerHandler.GetPlayerCount() >= 3)
+        {
+            //other day
+            _Sct.ExitLevel("GamePlay");
+        }
     }
     public void SetText(string v)
     {

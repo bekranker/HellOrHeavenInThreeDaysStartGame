@@ -21,6 +21,9 @@ MonoBehaviour:
     \xE7arpt\u0131. Bir anl\u0131k refleksle m\xFC\u015Fterinin bo\u011Faz\u0131n\u0131
     kestim ve \xF6ld\xFC."
   - "Bir ayl\u0131k kazanc\u0131m\u0131 vak\u0131fa ba\u011F\u0131\u015Flad\u0131m."
-  Picture: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  Picture: {fileID: -4082934557773332965, guid: 753c8d11b747545948a8bfd78901f9a5, type: 3}
   JugmentOne: "\xD6l\xE7\xFCl\xFCl\xFCk"
   JugmentTwo: "Payla\u015Fma"
+  Front: {fileID: 6110326497795299463, guid: e3676c4ea3a2441d1bb6471795082e9d, type: 3}
+  BackOY: {fileID: -4588207460560488985, guid: c8d7228c3cdba4af4aa08a26016856d7, type: 3}
+  Back: {fileID: -6502091284560737080, guid: f7e5adee271af40a49eae4cf80798b85, type: 3}

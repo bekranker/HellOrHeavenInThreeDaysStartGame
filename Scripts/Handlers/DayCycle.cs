@@ -2,7 +2,7 @@ using System;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
-
+using Random = UnityEngine.Random;
 public class DayCycle : MonoBehaviour, ITextSet
 {
 
@@ -19,6 +19,11 @@ public class DayCycle : MonoBehaviour, ITextSet
     {
         _startScale = transform.localScale;
         textEffect("Day " + _day);
+        Invoke("Announcment", Random.Range(10, 50));
+    }
+    private void Announcment()
+    {
+        CreateAudio.PlayAudio("GetLinePlease", 1f);
     }
     public int GetDay()
     {

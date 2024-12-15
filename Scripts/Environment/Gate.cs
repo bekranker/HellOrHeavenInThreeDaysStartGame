@@ -24,6 +24,8 @@ public class Gate : MonoBehaviour, Interaction
 
     public void OnClickEvent()
     {
+
+
         OnClick?.Invoke(_GateType);
     }
 

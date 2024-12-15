@@ -19,6 +19,9 @@ MonoBehaviour:
   - "Tezgah\u0131m\u0131 kald\u0131rmaya \xE7al\u0131\u015Fan polise sald\u0131rd\u0131m.
     Ama tezgah\u0131m\u0131n \xE7al\u0131\u015Fma izni vard\u0131. "
   - "Tezgah\u0131mda kalan \xFCr\xFCnleri hayvanlara da\u011F\u0131tt\u0131m."
-  Picture: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  Picture: {fileID: -3044761870746976912, guid: 783c06c4ccbff4252ab3d6dcc5d5a756, type: 3}
   JugmentOne: "Sab\u0131r"
   JugmentTwo: "Sab\u0131r"
+  Front: {fileID: 5736207300984576848, guid: 313f429bb331b484fbee2bb51591ba4e, type: 3}
+  BackOY: {fileID: 7905285861762575112, guid: 252072123fd334e19ae2438ae5a97ccc, type: 3}
+  Back: {fileID: 5736207300984576848, guid: a50792e6948484b34a220df3c9a762e4, type: 3}

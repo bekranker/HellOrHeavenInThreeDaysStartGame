@@ -20,6 +20,9 @@ MonoBehaviour:
     k\u0131rd\u0131"
   - "Sokakta bir kad\u0131n\u0131n d\xFC\u015Ft\xFC\u011F\xFCn\xFC g\xF6rd\xFCm ve
     ona yard\u0131m ettim."
-  Picture: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  Picture: {fileID: 1365112337536470412, guid: 1b33e788380d64674aaad3830fe38806, type: 3}
   JugmentOne: "A\xE7g\xF6zl\xFCl\xFCk"
   JugmentTwo: "Payla\u015Fma"
+  Front: {fileID: -3822558463212474180, guid: aad55eaff06e14a2498cd0d7c029d291, type: 3}
+  BackOY: {fileID: 7456914000446044207, guid: adef5868a4d6048789e9d0709949a11c, type: 3}
+  Back: {fileID: -3822558463212474180, guid: c69bc01e84d984ca6abecf0146bf3dba, type: 3}

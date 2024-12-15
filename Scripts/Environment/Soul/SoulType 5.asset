@@ -20,6 +20,9 @@ MonoBehaviour:
     i\u015F\xE7iler maa\u015Flar\u0131n\u0131 alamad\u0131."
   - "\u015Eirket hesaplar\u0131ndaki paran\u0131n bir k\u0131sm\u0131n\u0131 zimmetime
     ge\xE7irdim."
-  Picture: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  Picture: {fileID: -5718094790354867485, guid: 29efd982cd29f405c8eed64190d36178, type: 3}
   JugmentOne: Tembellik
   JugmentTwo: "A\xE7g\xF6zl\xFCl\xFCk"
+  Front: {fileID: 4216594197789296650, guid: 35405b18e111d48bbbec817ec1edb2a4, type: 3}
+  BackOY: {fileID: -1170530888302984114, guid: 837c68923535f4411aca57a5bb3c4929, type: 3}
+  Back: {fileID: 5741165859843755592, guid: 1398abb4448c5438299531e2baf4a998, type: 3}

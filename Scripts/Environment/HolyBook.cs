@@ -40,8 +40,8 @@ public class HolyBook : MonoBehaviour, Interaction
     {
         for (int i = 0; i < 6; i++)
         {
-            _MitzvahsTMPs[i].text = $"{i + 1}-) {Mitzvahs[i]}";
-            _SinsTMPs[i].text = $"{i + 1}-) {Sins[i]}";
+            _MitzvahsTMPs[i].text = $"{i + 1} {Mitzvahs[i]}";
+            _SinsTMPs[i].text = $"{i + 1} {Sins[i]}";
         }
     }
     public void OnClickEvent()

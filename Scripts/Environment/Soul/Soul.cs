@@ -60,7 +60,13 @@ public class Soul : MonoBehaviour, Interaction
         transform.DOMove(to.position, _Speed);
         _cv = cv;
     }
-
+    private Tween Harmony()
+    {
+        return _spriteRenderer.transform.DOLocalMove(Vector3.down * .3f, .8f).OnComplete(() =>
+        {
+            _spriteRenderer.transform.DOLocalMove(Vector3.zero, .8f).SetEase(Ease.InOutSine).OnComplete(() => Harmony());
+        }).SetEase(Ease.InOutSine);
+    }
     public void OnHoverEnter()
     {
         OnHover?.Invoke();

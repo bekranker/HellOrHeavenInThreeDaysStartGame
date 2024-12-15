@@ -20,6 +20,7 @@ public class NextButton : MonoBehaviour, Interaction
     public void OnClickEvent()
     {
         OnClick?.Invoke();
+        CreateAudio.PlayAudio("NextButton");
         Next();
     }
     public void Next()

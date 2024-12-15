@@ -14,6 +14,8 @@ public class CV : MonoBehaviour
     [SerializeField] private TMP_Text _Sex;
 
     [SerializeField] private Image _Picture;
+    [SerializeField] private Image _BigFrontPicture;
+
     private SoulType _currentSoulType;
     [SerializeField] private CameraHandler _CameraHandler;
     [SerializeField] private GameObject _closeButton;
@@ -31,6 +33,7 @@ public class CV : MonoBehaviour
         _Job.text = _currentSoulType.JobTitle;
         _Sex.text = _currentSoulType.Sex;
         _Picture.sprite = _currentSoulType.Picture;
+        _BigFrontPicture.sprite = _currentSoulType.Front;
     }
     //closing CV with pressing full screen button;
     public void CloseMe()

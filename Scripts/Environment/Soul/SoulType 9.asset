@@ -19,6 +19,9 @@ MonoBehaviour:
   - "Sanat sergisine gidip ya\u011Fl\u0131 boya ile sald\u0131r\u0131 d\xFCzenledim."
   - "Bir kafede bir \xF6\u011Frencinin \xE7antas\u0131n\u0131 unuttu\u011Funu fark
     ettim ve ona ula\u015Ft\u0131rd\u0131m."
-  Picture: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  Picture: {fileID: -3883093100488946636, guid: fa17c2807a03a48eea6779278a4491fb, type: 3}
   JugmentOne: "A\xE7g\xF6zl\xFCl\xFCk"
   JugmentTwo: "Payla\u015Fma"
+  Front: {fileID: 1127407795393380908, guid: 8c92edd1455c348a49818d8f5727698d, type: 3}
+  BackOY: {fileID: -7129770546932988657, guid: c37f1db0897d3413497e2a602c3ab74e, type: 3}
+  Back: {fileID: 1127407795393380908, guid: 7d1a52c6e1a1644878e4372064cc092b, type: 3}

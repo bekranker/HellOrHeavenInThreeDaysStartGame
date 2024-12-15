@@ -18,6 +18,9 @@ MonoBehaviour:
   Memories:
   - "Trafikte patinaj yaparken SUV model bir ara\xE7 bana \xE7arpt\u0131."
   - "Arkada\u015F\u0131mla tart\u0131\u015F\u0131rken ona zarar verdim. "
-  Picture: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  Picture: {fileID: -9188699301434461287, guid: 8f62a3b78338b4e1ca46d592a93b53f8, type: 3}
   JugmentOne: "\xD6fke"
   JugmentTwo: "\xD6fke"
+  Front: {fileID: 5041247232227857417, guid: 7ef6b51f24f7642be98ee95f2f155490, type: 3}
+  BackOY: {fileID: 6832909998513424871, guid: ebd9dc6c02a5245ca90d820ddf1b7e6d, type: 3}
+  Back: {fileID: -506817103650381172, guid: 7916ab3c741394fbd803081dad0ef033, type: 3}

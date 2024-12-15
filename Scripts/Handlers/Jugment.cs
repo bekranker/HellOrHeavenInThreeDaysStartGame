@@ -10,6 +10,8 @@ public class Jugment : MonoBehaviour
     [SerializeField] private HolyBook _HolyBook;
 
     public event Action<string> OnSelectGate;
+    public event Action OnSelectGateForResetUI;
+
     public event Action OnWrong;
     void OnEnable()
     {
@@ -51,11 +53,13 @@ public class Jugment : MonoBehaviour
             if (gateType == GateType.Hell)
             {
                 OnWrong?.Invoke();
+                CreateAudio.PlayAudio("cehennem", .5f);
             }
             //Right decision
             else
             {
                 Debug.Log("Right Decision");
+                CreateAudio.PlayAudio("cennet", .5f);
             }
         }
         else if (JugmentOneCount <= JugmentTwoCount)
@@ -64,17 +68,21 @@ public class Jugment : MonoBehaviour
             if (gateType == GateType.Hell)
             {
                 Debug.Log("Right Decision");
+                CreateAudio.PlayAudio("cehennem", .5f);
+
             }
             //wrong
             else
             {
                 OnWrong?.Invoke();
+                CreateAudio.PlayAudio("cennet", .5f);
+
             }
         }
-        print("Sevap Point: " + JugmentOneCount);
-        print("Günah Point: " + JugmentTwoCount);
+
         _PlayerHandler.MoveToGate(_Gate.transform.position);
         OnSelectGate?.Invoke("Line: " + _PlayerHandler.GetPlayerCount().ToString() + "/3");
+        OnSelectGateForResetUI?.Invoke();
     }
     private int Check(string myValue, Dictionary<int, string> dV, Dictionary<int, string> dV2)
     {

@@ -18,6 +18,9 @@ MonoBehaviour:
   Memories:
   - "Bankada birini \xF6ld\xFCrd\xFCm. "
   - "Sokak sat\u0131c\u0131s\u0131n\u0131n tezgah\u0131n\u0131 kald\u0131rd\u0131m. "
-  Picture: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  Picture: {fileID: 6434191958730258007, guid: 2f32fd082802a4d48a43fc0cac2553b1, type: 3}
   JugmentOne: "\xD6l\xE7\xFCl\xFCl\xFCk"
   JugmentTwo: Tembellik
+  Front: {fileID: -2486356378285045096, guid: 2a8dcc3725aba449ba605bdd766d0b11, type: 3}
+  BackOY: {fileID: 4402000104157083824, guid: e2179a09e652540e8973ce05f606197f, type: 3}
+  Back: {fileID: 5041247232227857417, guid: 681b11c5ff8034d7bb2314120c057652, type: 3}

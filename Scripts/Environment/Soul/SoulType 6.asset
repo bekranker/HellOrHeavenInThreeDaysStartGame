@@ -19,6 +19,9 @@ MonoBehaviour:
   - "Anneme ila\xE7 almam gerekiyordu ama maa\u015F\u0131m yatmad\u0131\u011F\u0131
     i\xE7in bankay\u0131 soymaya gittim."
   - "Maa\u015F\u0131m\u0131 alamad\u0131\u011F\u0131m i\xE7in muhasebeciye sald\u0131rd\u0131m."
-  Picture: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  Picture: {fileID: 7896314066986134799, guid: eab4233e51758459084bd47ba55bde93, type: 3}
   JugmentOne: Gurur
   JugmentTwo: "\xD6fke"
+  Front: {fileID: -4588207460560488985, guid: 2bc45b04e8d77444a85fe8ef05f2c240, type: 3}
+  BackOY: {fileID: 3755694216949396154, guid: 6be98b47cfea641f4aaee7f148d37d10, type: 3}
+  Back: {fileID: 326787561563575505, guid: 3f7d02da9b1ad490fa63f515d38ad826, type: 3}

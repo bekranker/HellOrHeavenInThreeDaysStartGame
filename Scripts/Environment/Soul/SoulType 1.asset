@@ -19,6 +19,9 @@ MonoBehaviour:
   - "\u0130\u015F\xE7ilerin maa\u015F\u0131na zam yapmak yerine yat partisi d\xFCzenledim"
   - "E\u015Fim hamileydi ve hastaneye yeti\u015Ftirmeye \xE7al\u0131\u015F\u0131yordum.
     SUV model arac\u0131mla \xF6ndeki araca \xE7arpt\u0131m ve \u015Fof\xF6r \xF6ld\xFC."
-  Picture: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  Picture: {fileID: -159779691815521759, guid: f37bd783b155e4142ab9041aa49958e2, type: 3}
   JugmentOne: "A\xE7g\xF6zl\xFCl\xFCk"
   JugmentTwo: "Sab\u0131r"
+  Front: {fileID: -159779691815521759, guid: c5deeb88761a04a4e8f12be39bafb01d, type: 3}
+  BackOY: {fileID: 3599676219075978799, guid: b33718c853a46478889947e123cc75e1, type: 3}
+  Back: {fileID: 4216594197789296650, guid: c215dcd3b82a948ecb6a7f375a1636ed, type: 3}

@@ -12,5 +12,6 @@ public class SoulType : ScriptableObject
     public Sprite Picture;
     public string JugmentOne;
     public string JugmentTwo;
+    public Sprite Front, BackOY, Back;
 
 }
